@@ -126,3 +126,12 @@ pre {
 code {
   font-family: monospace;
 }
+
+.nav-link {
+  color: var(--colorText);
+  font-weight: bold;
+}
+.content-link {
+  color: var(--colorText);
+  font-weight: bold;
+}
