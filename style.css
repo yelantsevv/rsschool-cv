@@ -1,0 +1,137 @@
+:root {
+  color-scheme: dark;
+  --colorText: #eeeeee;
+  --backgroundColor: #606060;
+  --colorFont: #444444;
+  --colorShadow: #000000c0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --colorText: #333333;
+    --backgroundColor: #fcfcfc;
+    --colorFont: #f4f4f4;
+    --colorShadow: #00000050;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+  line-height: 1.5;
+  color: var(--colorText);
+}
+a:hover {
+  color: #888888;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--colorFont);
+}
+h1 {
+  padding-top: 15px;
+  font-size: 30px;
+}
+
+h2 {
+  margin: 5px 0;
+  padding: 5px 0;
+  font-size: 20px;
+  border-top: 1px solid var(--colorText);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: clamp(300px, 100%, 820px);
+  padding: 0 20px;
+  background-color: var(--backgroundColor);
+  box-shadow: 0 0 20px 10px var(--colorShadow);
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  align-items: flex-end;
+  list-style: none;
+}
+
+.header {
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.main__about {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.main__photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px #cccccc7a;
+}
+.skills__list > li::marker {
+  content: "✓ ";
+}
+
+.footer {
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+.footer__img {
+  width: 100px;
+  height: 40px;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+  .main__about {
+    flex-direction: column;
+  }
+  .main {
+    align-self: center;
+  }
+}
+
+pre {
+  padding: 10px;
+  background-color: var(--colorFont);
+  border-radius: 5px;
+  border: 1px solid var(--colorText);
+}
+code {
+  font-family: monospace;
+}
+
+.nav-link {
+  color: var(--colorText);
+  font-weight: bold;
+}
+.content-link {
+  color: var(--colorText);
+  font-weight: bold;
+}
